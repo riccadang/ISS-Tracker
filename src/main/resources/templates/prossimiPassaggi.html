@@ -1,0 +1,37 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html lang="it">
+<head>
+<title>Passaggi</title>
+</head>
+<link rel="stylesheet" type="text/css" href="css/passaggi.css">
+<body>
+  
+      
+    <header class="tutto__header">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3219/logo.svg" alt="" />
+        <h1>Informazioni sulla città
+      <td th:text="${citta}"></td></h1>
+  </header>
+   
+      <h2 class="title"><div1>Il sole tramonterà alle
+      <td th:text="${orarioTramonto}"></td>
+      e sorgerà alle
+      <td th:text="${orarioAlba}"></td>
+      </div1></h2>
+
+      <h3 class="passaggiVisibili"><p class="titolo">Passaggi visibili</p>
+      <ul>
+        <li th:each="item : ${passaggiVisibili}" th:text="${item}">cristo</li>
+      </ul>
+      </h3>
+      
+      <h4 class="passaggiNonVisibili"><p class=titolo>Passaggi non visibili
+      <ul>
+        <li th:each="item : ${passaggi}" th:text="${item}">Item
+          description here...</li>
+      </ul>
+      </h4>
+    
+  
+</body>
+</html>

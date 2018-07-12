@@ -1,0 +1,23 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+
+<html>
+<head>
+	<title></title>
+  <head>
+<link rel="stylesheet" type="text/css" href="css/astronauti.css">
+</head>
+</head>
+<body>
+	<div>
+  <h2>Gli astronauti a bordo sono:</h2>
+  <ul>
+        <li th:each="item : ${equipaggio}" th:text="${item}"></li>
+      </ul>
+  <h3>
+    <a href="https://it.wikipedia.org/wiki/Lista_degli_equipaggi_della_ISS_(Expeditions)">Puoi trovare altre informazioni sugli equipaggi qui</a>
+  
+  </h3>
+</div>
+
+</body>
+</html>
